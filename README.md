@@ -41,19 +41,17 @@ Done that we will see the lines being added to the table by the terminal output.
 
 Postman was used to make CRUD actions. For this we have to use the following URLS to each action:
 
-` 
-ACTION: POST
-URL: http://localhost:3000/create
+> ACTION: POST
+> URL: http://localhost:3000/create
 
-ACTION: GET
-URL: http://localhost:3000/get
-URL: http://localhost:3000/get/{id}
+> ACTION: GET
+> URL: http://localhost:3000/get
+> URL: http://localhost:3000/get/{id}
 
-ACTION: PUT
-URL: http://localhost:3000/update/{id}
+> ACTION: PUT
+> URL: http://localhost:3000/update/{id}
 
-ACTION: DELETE
-URL: http://localhost:3000/delete/{id} 
-`
+> ACTION: DELETE
+> URL: http://localhost:3000/delete/{id} 
 
 Then we get the response with a successful message and the data requested.
