@@ -2,7 +2,7 @@ version: "3.9"
 services:
   database:
     image: postgres
-    container_name: dev-db
+    container_name: dev-db1
     restart: always
     volumes:
       - pgdata:/data/postgres
