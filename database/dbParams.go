@@ -2,7 +2,7 @@ package database
 
 func DatabaseParams() (string, int, string, string, string) {
 	host := "localhost"
-	port := 5432
+	port := 5435
 	user := "docker"
 	password := "docker"
 	dbname := "rentx"

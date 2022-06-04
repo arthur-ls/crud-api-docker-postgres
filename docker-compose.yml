@@ -7,7 +7,7 @@ services:
     volumes:
       - pgdata:/data/postgres
     ports:
-      - 5432:5432
+      - 5435:5435
     environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=docker
