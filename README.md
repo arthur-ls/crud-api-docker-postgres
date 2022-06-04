@@ -17,7 +17,7 @@ So after installing Colima and Docker and creating docker-compose.yml the termin
 
 After it successfully ran:
 
-'docker-compose up'
+`docker-compose up`
 
 Then we will have our Postgresql ready to accept connections. Furthermore it is possible to connect the database in a database tool as DBeaver to make queries and see data added in the table.
 
@@ -31,17 +31,17 @@ To configure it is necessary to create a new database connection selecting Postg
 
 After Docker is up and the dbParams.env is correctly configured with host, port, user, password and database name we can run the project by:
 
-'go run main.go'
+`go run main.go`
 
 Done that we will see the lines being added to the table by the terminal output. Then we can check if all the data is in the Postgresql table by making a query in a database tool such as DBeaver:
 
-'SELECT * FROM competition'
+`SELECT * FROM competition`
 
 ## CRUD actions in Postman
 
 Postman was used to make CRUD actions. For this we have to use the following URLS to each action:
 
-'ACTION: POST
+`ACTION: POST
 URL: http://localhost:3000/create
 
 ACTION: GET
@@ -52,6 +52,6 @@ ACTION: PUT
 URL: http://localhost:3000/update/{id}
 
 ACTION: DELETE
-URL: http://localhost:3000/delete/{id}'
+URL: http://localhost:3000/delete/{id}`
 
 Then we get the response with a successful message and the data requested.
