@@ -10,18 +10,15 @@ import (
 )
 
 var comp entities.Competition
+var db, err = database.InitDB()
 
 func CreateTable() {
-	db, err := database.InitDB()
-
 	if _, err = db.Exec("CREATE TABLE IF NOT EXISTS competition(LeagueID INT NOT NULL,CountryID INT NOT NULL,Name VARCHAR(100) NOT NULL);"); err != nil {
 		panic(err)
 	}
 }
 
 func GetAll() ([]entities.Data, error) {
-	db, err := database.InitDB()
-
 	defer db.Close()
 
 	var competition []entities.Data
@@ -52,7 +49,6 @@ func GetAll() ([]entities.Data, error) {
 }
 
 func GetCompetitionById(id int64) (entities.Data, error) {
-	db, err := database.InitDB()
 	defer db.Close()
 	var i entities.Data
 	if err != nil {
@@ -76,8 +72,6 @@ func GetCompetitionById(id int64) (entities.Data, error) {
 }
 
 func DeleteCompetitionById(id int64) int64 {
-	db, err := database.InitDB()
-
 	defer db.Close()
 
 	sqlStatement := `DELETE FROM competition WHERE LeagueID=$1`
@@ -99,8 +93,6 @@ func DeleteCompetitionById(id int64) int64 {
 }
 
 func InsertCompetitionById(competition entities.Data) int64 {
-	db, err := database.InitDB()
-
 	defer db.Close()
 
 	sqlStatement := `INSERT INTO competition (LeagueID, CountryID, Name) VALUES ($1, $2, $3) RETURNING LeagueID`
@@ -119,8 +111,6 @@ func InsertCompetitionById(competition entities.Data) int64 {
 }
 
 func UpdateCompetitionById(id int64, comp entities.Data) int64 {
-	db, err := database.InitDB()
-
 	defer db.Close()
 
 	sqlStatement := `UPDATE competition SET CountryID=$2, Name=$3 WHERE LeagueID=$1`
