@@ -13,7 +13,7 @@ Before get Docker started [Colima](https://smallsharpsoftwaretools.com/tutorials
 
 So after installing Colima and Docker and creating docker-compose.yml the terminal was opened:
 
-'colima start'
+`colima start`
 
 After it successfully ran:
 
